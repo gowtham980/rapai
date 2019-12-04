@@ -1,0 +1,13 @@
+print("Enter the number:")
+z=int(input())
+for i in range(0,z):
+    n=i+1
+    # print(n)
+    if (n%3==0 and n%5!=0) :
+        print("Fizz")
+    if (n%5==0 and n%3!=0):
+        print("Buzz")
+    if (n%3==0 and n%5==0):
+        print("FizzBuzz")
+    if (n%3!=0 and n%5!=0):
+        print(n)
