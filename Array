@@ -11,8 +11,6 @@ in_lenght = len(inlist)
 for i in range(in_lenght):
     for k in range(i):
         if(inlist[i] == inlist[k]):
-            # inlist.pop(i)
-            # inlist.pop(k)
             print("same")
             x+=1
 print(x)
