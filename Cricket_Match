@@ -1,0 +1,27 @@
+def _total(ball,i):
+    return(sum(ball))
+
+ball=[]
+n=int(input("Enter number of balls:\n"))
+ 
+for i in range(0,n):
+    temp=int(input("Enter score:\n"))
+    ball.append(temp)
+ 
+i = len(ball)
+print(ball)
+ans = _total(ball,i) 
+print("Total Score:",ans)
+in_lenght = len(ball)
+
+batman1=0
+batman2=0
+def _swap():
+    temp=x
+    x=y
+    y=temp
+for s in range(in_lenght):
+    if(ball[s]%2==0 and (s+1)%6!=0):
+        print("no swap")
+    if(ball[s]%2!=0 and (s+1)%6==0):
+        print("swap")
