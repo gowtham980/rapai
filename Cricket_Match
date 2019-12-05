@@ -2,6 +2,8 @@ def _total(ball,i):
     return(sum(ball))
 
 ball=[]
+p1=[]
+p2=[]
 n=int(input("Enter number of balls:\n"))
  
 for i in range(0,n):
@@ -12,16 +14,16 @@ i = len(ball)
 print(ball)
 ans = _total(ball,i) 
 print("Total Score:",ans)
-in_lenght = len(ball)
+for s in range(i):
 
-batman1=0
-batman2=0
-def _swap():
-    temp=x
-    x=y
-    y=temp
-for s in range(in_lenght):
     if(ball[s]%2==0 and (s+1)%6!=0):
-        print("no swap")
-    if(ball[s]%2!=0 and (s+1)%6==0):
-        print("swap")
+        p2.append(ball[s])
+
+    elif(ball[s]%2!=0 and (s+1)%6==0):
+        p1.append(ball[s])
+    elif(ball[s]%2!=0 and (s+1)%6!=0):
+        print("no change")
+print(p1)
+print("First person score:",sum(p1))
+print(p2)
+print("Second person score:",sum(p2))
