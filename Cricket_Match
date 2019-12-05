@@ -15,15 +15,17 @@ print(ball)
 ans = _total(ball,i) 
 print("Total Score:",ans)
 for s in range(i):
-
-    if(ball[s]%2==0 and (s+1)%6!=0):
+    if(ball[s]%2==0 and (s+1)%6!=0): #even and !6
         p2.append(ball[s])
-
-    elif(ball[s]%2!=0 and (s+1)%6==0):
+        # print("No change")
+    elif(ball[s]%2!=0 and (s+1)%6==0): #odd and 6
+        p2.append(ball[s])
+        # print("No change")
+    elif(ball[s]%2!=0 and (s+1)%6!=0): #odd and !6
+        # print("change")
         p1.append(ball[s])
-    elif(ball[s]%2!=0 and (s+1)%6!=0):
-        print("no change")
-print(p1)
+    elif(ball[s]%2==0 and (s+1)%6==0): #even and 6 
+        # print("Change")
+        p1.append(ball[s])
 print("First person score:",sum(p1))
-print(p2)
 print("Second person score:",sum(p2))
