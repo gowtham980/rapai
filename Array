@@ -1,16 +1,13 @@
-x=1
 inlist=[]
 n=int(input("Enter size of the list:\n"))
  
 for i in range(0,n):
-    temp=int(input("Enter number to append:\n"))
+    print("Select the number between 0 -",n)
+    temp=int(input())
     inlist.append(temp)
- 
 print(inlist)
-in_lenght = len(inlist)
-for i in range(in_lenght):
-    for k in range(i):
-        if(inlist[i] == inlist[k]):
-            print("same")
-            x+=1
-print(x)
+print(len(inlist))
+for i in range(len(inlist)):
+    if i in inlist:
+        if inlist.count(inlist[i])>1:
+            print(inlist[i],"-",inlist.count(inlist[i]))
