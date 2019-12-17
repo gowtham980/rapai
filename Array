@@ -2,10 +2,11 @@ inlist=[]
 n=int(input("Enter size of the list:\n"))
  
 for i in range(0,n):
-    print("Select the number between 0 -",n)
+    print("Enter the number:")
     temp=int(input())
     inlist.append(temp)
 print(inlist)
 print(len(inlist))
 for f in sorted(set(inlist)):
-    print(f,"-",inlist.count(f))
+    if inlist.count(f)>1:
+        print(f,"-",inlist.count(f))
