@@ -7,7 +7,5 @@ for i in range(0,n):
     inlist.append(temp)
 print(inlist)
 print(len(inlist))
-for i in range(len(inlist)):
-    if i in inlist:
-        if inlist.count(inlist[i])>1:
-            print(inlist[i],"-",inlist.count(inlist[i]))
+for f in sorted(set(inlist)):
+    print(f,"-",inlist.count(f))
